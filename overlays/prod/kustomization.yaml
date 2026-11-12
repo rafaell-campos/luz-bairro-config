@@ -2,7 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 # TODO(aluno): troque cicd-prod pelo seu projeto de producao ($PROD_NS).
-namespace:  roc21-dev
+namespace:  cicd-dev-rafael-campos
 
 resources:
   - ../../base
@@ -13,7 +13,7 @@ resources:
 # porque e la que o pipeline publica a imagem.
 images:
   - name: luz-bairro
-    newName: image-registry.openshift-image-registry.svc:5000/roc21-dev/luz-bairro
+    newName: image-registry.openshift-image-registry.svc:5000/cicd-dev-rafael-campos/luz-bairro
     digest: sha256:29e40ef48f3af298bf23a4d0e4b5c9e13b00003603036ddbe40113ef964a3044
 
 configMapGenerator:
